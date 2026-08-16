@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://127.0.0.1:8000/api/debate';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000/api/debate';
 
 export async function createDebate(topic: string, student_position: 'for' | 'against') {
   const res = await fetch(`${API_BASE_URL}/`, {
