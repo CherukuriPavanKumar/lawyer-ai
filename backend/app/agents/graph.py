@@ -39,7 +39,7 @@ async def reformulate_query_node(state: DebateState):
         )},
         {"role": "user", "content": f"Topic: {topic}\n\nArgument: {student_arg}"}
     ]
-    keywords = await generate_completion(messages, model="llama-3.1-8b-instant")
+    keywords = await generate_completion(messages, model="openai/gpt-oss-20b")
     # Clean up and use as search query
     search_query = keywords.strip().replace("\n", " ")
     print(f"[RETRIEVAL] Reformulated query: '{search_query}'")

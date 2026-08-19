@@ -48,7 +48,7 @@ async def evaluate_debate(topic: str, student_position: str, turns: List[Dict[st
     
     messages = [{"role": "system", "content": system_message}]
     
-    response_text = await generate_completion(messages, model="llama-3.3-70b-versatile", response_format={"type": "json_object"})
+    response_text = await generate_completion(messages, model="openai/gpt-oss-120b", response_format={"type": "json_object"})
     
     try:
         clean_text = response_text.strip()

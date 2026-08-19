@@ -64,7 +64,7 @@ async def verify_citations(generated_text: str, retrieved_chunks: List[Chunk]) -
     messages = [{"role": "user", "content": prompt}]
     
     # Use a cheap/fast model for verification. 
-    response = await generate_completion(messages, model="llama-3.1-8b-instant")
+    response = await generate_completion(messages, model="openai/gpt-oss-20b")
     
     if response.strip().upper().startswith("YES"):
         return VerificationResult(passed=True)

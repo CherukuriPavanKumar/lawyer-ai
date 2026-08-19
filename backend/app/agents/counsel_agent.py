@@ -35,5 +35,5 @@ async def generate_rebuttal(topic: str, student_position: str, student_argument:
         {"role": "user", "content": student_argument}
     ]
     
-    response = await generate_completion(messages, model="llama-3.3-70b-versatile")
+    response = await generate_completion(messages, model="openai/gpt-oss-120b")
     return response

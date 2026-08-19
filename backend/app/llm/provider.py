@@ -1,7 +1,7 @@
 from app.config import settings
 from typing import List, Dict, Optional
 
-async def generate_completion(messages: List[Dict[str, str]], model: str = "llama-3.3-70b-versatile", response_format: Optional[dict] = None) -> str:
+async def generate_completion(messages: List[Dict[str, str]], model: str = "openai/gpt-oss-120b", response_format: Optional[dict] = None) -> str:
     """
     Abstracted LLM provider interface.
     """
